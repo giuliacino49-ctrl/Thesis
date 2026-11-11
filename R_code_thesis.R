@@ -7,7 +7,9 @@ library(writexl)
 dati <- X2022
 # 1. Prendi tutto il dataset e trasforma ogni ":" in un valore mancante (NA)
 dati[dati == ":"] <- NA
-
+# other comments 
+# another comment
+# ciao iiiiih
 
 # 2. Conduci in formato numerico tutte le colonne dalla seconda in poi
 dati[, -1] <- lapply(dati[, -1], as.numeric)
