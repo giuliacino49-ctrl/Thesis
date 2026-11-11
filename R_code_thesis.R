@@ -3,7 +3,7 @@ library(VIM)
 library(readxl)
 library(writexl)
 
-# CALCOLO AMPI 2022
+
 dati <- X2022
 # 1. Prendi tutto il dataset e trasforma ogni ":" in un valore mancante (NA)
 dati[dati == ":"] <- NA
@@ -17,6 +17,7 @@ dati_imputati <- kNN(dati, k = 3, imp_var = FALSE)
 # 2.1 Prendi la matrice numerica e assegna i nomi dei Paesi alle righe
 matrice_num <- dati_imputati[, -1]
 rownames(matrice_num) <- dati_imputati[[1]]
+# ciao ih
 
 # 2.2 Standardizza i dati (scala) affinché ogni indicatore pesi allo stesso modo
 matrice_scaled <- scale(matrice_num)
